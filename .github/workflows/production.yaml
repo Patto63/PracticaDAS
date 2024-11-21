@@ -1,5 +1,3 @@
-name: CI/CD
-
 on:
   push:
     branches: [main]
@@ -10,16 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14, 16]
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
- 
-    # Eliminamos el paso que ejecuta las pruebas
-    # - run: npm test
+      - uses: actions/checkout@v3
+      - name: Deploy HTML, CSS, and JS
+        run: echo "Deployment steps for static files (HTML, CSS, JS) go here"
