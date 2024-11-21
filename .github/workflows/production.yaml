@@ -10,5 +10,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Deploy HTML, CSS, and JS
-        run: echo "Deployment steps for static files (HTML, CSS, JS) go here"
+        with:
+          node-version: 20
